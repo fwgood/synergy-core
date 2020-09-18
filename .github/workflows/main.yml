@@ -31,7 +31,7 @@ jobs:
         run: |
               mkdir build
               cd build
-              cmake -G "Visual Studio 16 2019 Win64" -DCMAKE_BUILD_TYPE=Debug ..
+              cmake -G "Visual Studio 16 2019" -DCMAKE_BUILD_TYPE=Debug ..
               msbuild synergy-core.sln /p:Platform="x64" /p:Configuration=Debug /m
               cd ..
               copy ext\openssl\windows\x64\bin\* build\

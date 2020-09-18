@@ -24,7 +24,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: dir
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
@@ -32,7 +32,7 @@ jobs:
               cd Projects\synergy
               mkdir build
               cd build
-              call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat"
+              call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\vcvarsall.bat"
               cmake -G "Visual Studio 14 2015 Win64" -DCMAKE_BUILD_TYPE=Debug ..
               msbuild synergy-core.sln /p:Platform="x64" /p:Configuration=Debug /m
               cd ..
